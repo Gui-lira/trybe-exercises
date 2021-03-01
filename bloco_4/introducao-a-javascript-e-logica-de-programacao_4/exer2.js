@@ -21,5 +21,26 @@ function greaterWord(words) {
             {greater = words[index]}
         }
     return greater;    
-}
-console.log(greaterWord(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
+};
+
+function mostRepetitive(array) {
+    let map = {};
+    let maxValue = 0;
+    let maxItem;
+    for (let index in array) 
+        {if (map[index] === undefined)
+            {map[index] = 1}
+        else {map[index] += 1}
+        if (map[index] > maxValue)
+            {maxValue = map[index];
+            maxItem = array[index]}
+        };
+    return maxItem;
+};
+function sumN(n) {
+    let sum = 0;
+    for (let numbers = 1;numbers <= n;numbers += 1)
+        {sum += numbers};
+    return sum;
+};
+console.log(sumN(5))
