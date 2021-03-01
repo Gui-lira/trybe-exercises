@@ -23,7 +23,7 @@ function greaterWord(words) {
     return greater;    
 };
 
-function mostRepetitive(array) {
+function mostRepetitive(array) {// codigo baseado em https://amjustsam.medium.com/how-to-find-most-frequent-item-of-an-array-12015df68c65
     let map = {};
     let maxValue = 0;
     let maxItem;
@@ -43,4 +43,9 @@ function sumN(n) {
         {sum += numbers};
     return sum;
 };
-console.log(sumN(5))
+function ending(str,end) {
+    return str.endsWith(end)
+};
+
+
+
