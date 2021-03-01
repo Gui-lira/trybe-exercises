@@ -13,4 +13,13 @@ function minor(numbers) {let minor = numbers[0];
                                     {minor = numbers[index]}
                                 };
                         return minor; };
-console.log(minor([2, 4, 6, 7, 10, 0, -3]))
+
+function greaterWord(words) {
+    let greater = words[0];
+    for (let index in words)
+        {if (words[index].length > greater.length)
+            {greater = words[index]}
+        }
+    return greater;    
+}
+console.log(greaterWord(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']))
