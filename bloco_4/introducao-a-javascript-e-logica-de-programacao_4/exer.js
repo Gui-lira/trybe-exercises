@@ -9,8 +9,12 @@ console.log('Olá, ' + info.personagem);
 info['recorrente'] = 'sim';
 
 
-for (let index in info)
-    {console.log(index)};
 
-for (let index in info)
-    {console.log(info[index])};
+let infoPatinhas = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim'
+};
+for (let index in infoPatinhas) 
+    {console.log(info[index] + ' e ' + infoPatinhas[index])}
