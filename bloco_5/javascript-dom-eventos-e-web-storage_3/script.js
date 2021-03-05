@@ -37,4 +37,16 @@ function createDaysOfTheWeek() {
       button.innerHTML = str;
       document.querySelector('.buttons-container').appendChild(button);
   };
-  holidays('Feriados')
+  holidays('Feriados');
+  let button1 = document.querySelector('#btn-holiday');
+  button1.addEventListener('click', function(){
+      let list = document.querySelectorAll('.holiday');
+      for (let itens of list) {
+          if (itens.style.backgroundColor === 'yellow') {
+            itens.style.backgroundColor = 'rgb(238,238,238)'
+          }
+          else  {
+            itens.style.backgroundColor = 'yellow'
+          }
+      }
+  })
