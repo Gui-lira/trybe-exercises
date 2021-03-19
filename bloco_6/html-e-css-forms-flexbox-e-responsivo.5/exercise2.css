@@ -31,7 +31,20 @@ html {
     }
     h2, h3 {
         font-size: x-large;
-   }
-   h1 {
-       font-size: xx-large;
-   }
+    }
+    h1 {
+        font-size: xx-large;
+    }
+
+    @media screen and (min-width:1500px){
+        body {
+            margin: 100px;
+            font-size: x-large;
+        }
+        h2, h3 {
+            font-size: xx-large;
+        }
+        h1 {
+            font-size: xx-large;
+        }
+    }
