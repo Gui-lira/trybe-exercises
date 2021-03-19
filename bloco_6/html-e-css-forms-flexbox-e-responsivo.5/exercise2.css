@@ -4,3 +4,12 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  body {
+      margin: 20px;
+  }
+  h2, h3 {
+      font-size: medium;
+  }
+  h1 {
+      font-size: large;
+  }
