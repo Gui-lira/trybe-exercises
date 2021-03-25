@@ -4,7 +4,7 @@ const greetPeople = (people) => {
     for (const person in people) {
       list.push(`Hello ${people[person]}`)
     }
-    return list
+    return list;
   };
   
   const parameter = ['Irina', 'Ashleigh', 'Elsa'];

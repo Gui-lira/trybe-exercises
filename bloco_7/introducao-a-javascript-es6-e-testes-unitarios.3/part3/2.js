@@ -1,15 +1,12 @@
 const removeVowels = (word) => {
     const characters = word.split('');
     const results = [];
-    let count = 0
+    let count = 0;
+    let str = 'aoieu';
   
     for (let index = 0; index < characters.length; index += 1) {
       if (
-        characters[index] === 'a' ||
-        characters[index] === 'o' ||
-        characters[index] === 'i' ||
-        characters[index] === 'e' ||
-        characters[index] === 'u'
+        str.includes(characters[index])
       ) {
           count += 1
         results.push(count);
