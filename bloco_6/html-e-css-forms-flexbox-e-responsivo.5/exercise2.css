@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+      margin: 20px;
+  }
+  h2, h3 {
+      font-size: medium;
+  }
+  h1 {
+      font-size: large;
+  }
+
+  @media screen and (min-width: 900px) {
+      body {
+          font-size: large;
+          margin: 40px;
+      }
+     .chaptersContainer, .informationContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2, h3 {
+        font-size: x-large;
+    }
+    h1 {
+        font-size: xx-large;
+    }
+
+    @media screen and (min-width:1500px){
+        body {
+            margin: 100px;
+            font-size: x-large;
+        }
+        h2, h3 {
+            font-size: xx-large;
+        }
+        h1 {
+            font-size: xx-large;
+        }
+    }
