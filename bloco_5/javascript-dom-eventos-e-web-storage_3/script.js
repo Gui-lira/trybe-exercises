@@ -38,8 +38,8 @@ function createDaysOfTheWeek() {
       document.querySelector('.buttons-container').appendChild(button);
   };
   holidays('Feriados');
-  let button1 = document.querySelector('#btn-holiday');
-  button1.addEventListener('click', function(){
+  let buttonH = document.querySelector('#btn-holiday');
+  buttonH.addEventListener('click', function(){
       let list = document.querySelectorAll('.holiday');
       for (let itens of list) {
           if (itens.style.backgroundColor === 'yellow') {
@@ -49,4 +49,66 @@ function createDaysOfTheWeek() {
             itens.style.backgroundColor = 'yellow'
           }
       }
-  })
+  });
+  function fridays(str) {
+    let button = document.createElement('button');
+    button.id = 'btn-friday';
+    button.innerHTML = str;
+    document.querySelector('.buttons-container').appendChild(button);
+};
+fridays('Sexta-feira');
+
+let buttonF = document.querySelector('#btn-friday');
+  buttonF.addEventListener('click', function(){
+      let list = document.querySelectorAll('.friday');
+      for (let itens of list) {
+          if (itens.style.backgroundColor != 'red') {
+            itens.style.backgroundColor = 'red'
+          }
+          else  {
+            itens.style.backgroundColor = 'rgb(238,238,238)'
+          }
+      }
+});
+ulDays.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px'
+});
+ulDays.addEventListener('mouseout',function(event) {
+    event.target.style.fontSize = '20px'
+});
+function task(str) {
+    let task = document.createElement('span');
+    task.innerText = str;
+    document.querySelector('.my-tasks').appendChild(task);
+};
+task('estudar');
+
+function divTask(str) {
+    let divTask = document.createElement('div');
+    divTask.style.backgroundColor = str;
+    divTask.className = 'task';
+    document.querySelector('.my-tasks').appendChild(divTask)
+};
+divTask('blue');
+let divTaskItem = document.querySelector('.task');
+divTaskItem.addEventListener('click', function() {
+    if (divTaskItem.classList.contains('selected')) {
+        divTaskItem.classList.remove('selected')
+    }
+    else {
+        divTaskItem.classList.add('selected')
+    }
+});
+let taskDiv = document.querySelector('.task');
+let taskColor = taskDiv.style.backgroundColor;
+let selectedTask = document.getElementsByClassName('task selected');
+ulDays.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor != taskColor) {
+        let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    }
+    else {
+        event.target.style.color = 'rgb(119,119,119)'
+    }
+})
