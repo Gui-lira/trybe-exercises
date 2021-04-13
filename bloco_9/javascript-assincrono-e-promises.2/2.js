@@ -7,11 +7,12 @@ const promise = new Promise((resolve, reject) => {
         list.push(number);
     };
     const sum = list.map((item) => item * item).reduce((acumulator, item) => acumulator += item);
-    (sum > 8000) ? resolve() : reject();    
+    (sum > 8000) ? resolve(sum) : reject();    
 });
 
 
-    promise.then(() => console.log('deu certo'))
+    promise
+    .then(sum => console.log([1,2,3,5,10].map((item) =>  sum / item)))
     .catch(() => console.log('deu errado'))
 }
 
