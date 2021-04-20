@@ -45,6 +45,6 @@ const getByAge = async (age) => {
       })
       it('testa o erro', () => {
         //   const test = await getByAge(10)
-          expect(getByAge(10)).resolves.toBe('não existe animal')
+        return  expect(getByAge(10)).resolves.toBe('não existe animal')
       })
   })
