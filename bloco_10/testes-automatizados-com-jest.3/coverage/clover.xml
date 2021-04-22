@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619117640323" clover="3.2.0">
-  <project timestamp="1619117640323" name="All files">
+<coverage generated="1619118244595" clover="3.2.0">
+  <project timestamp="1619118244595" name="All files">
     <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0" elements="5" coveredelements="2" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="1.js" path="/home/gui/Trybe/trybe-exercises/bloco_10/testes-automatizados-com-jest.3/1.js">
       <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
