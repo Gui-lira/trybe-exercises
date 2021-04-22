@@ -17,4 +17,20 @@ test('exercicio 2', () => {
     .mockImplementation((a,b) => a / b);
     expect(random.random100(2,1)).toBe(2);
     expect(random.random100).toHaveBeenCalled();
-})
+});
+
+test('exercicio 3', () => {
+    random.random100 = jest
+    .fn()
+    .mockImplementation((a,b,c) => a * b * c);
+    expect(random.random100(2,1,3)).toBe(6);
+    expect(random.random100).toHaveBeenCalled();
+
+    random.random100.mockClear();
+
+    random.random100 = jest
+    .fn()
+    .mockImplementation((a) => 2 * a);
+    expect(random.random100(2)).toBe(4);
+    expect(random.random100).toHaveBeenCalled()
+});
